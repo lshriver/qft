@@ -9,6 +9,7 @@ def plot_opt_surface(cost_arr, params, m, cost, n=200) -> None:
     # Grid of elements
     X, Y = np.meshgrid(theta1, theta2)
     # Cost function on grid
+    z = []
     for y in Y:
         for x in X[0]:
             z.append(cost([x, y[0]]))
